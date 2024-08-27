@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --background: #F3F5FC;
+    --primary-color: #0A3871;
+    --secondary-color: #D8DFE8;
+    --text-color: #495057;
+    --white-color: #ffffff;
+    --font-inter: 'Inter', sans-serif;
+    --base-font-size: 1rem;
+}
+
+* {
+    padding: 0;
+    font-weight: 400;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--background);
+    font-size: var(--base-font-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.logo {
+    padding-top: 0.625rem;
+    margin-left: 0.625rem;
+    width: 10%;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.625rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    max-width: 90vw;
+}
+
+.area-texto {
+    height: 25rem;
+    border: none;
+    color: var(--primary-color);
+    margin-top: 1.875rem;
+    padding: 0.125rem;
+    text-transform: lowercase;
+    width: 100%;
+}
+
+::placeholder {
+    color: var(--primary-color);
+}
+
+.area-texto:focus {
+    outline: none;
+}
+
+.mensaje {
+    height: 39.375rem;
+    background: var(--white-color);
+    background-image: url("/imagenes/Muñeco.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 1.25rem;
+    padding-left: 1.25rem;
+    width: 100%;
+    max-width: 50rem;
+    background-size: contain;
+}
+
+.mensaje:focus {
+    outline: none;
+}
+
+.botones {
+    display: flex;
+    margin-top: 1.125rem;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 50rem;
+    gap: 24px;
+}
+
+.boton-desencriptar,
+.boton-encriptar,
+.boton-copiar {
+    background: var(--secondary-color);
+    border: 0.0625rem solid var(--primary-color);
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    height: 4.1875rem;
+    width: 100%;
+    max-width: 20.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.boton-encriptar {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.boton-copiar {
+    margin-top: 1rem;
+    position: static;
+    text-align: center;
+}
+
+.informacion {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mensaje {
+        position: static;
+        margin-left: 2rem;
+    }
+
+    .boton-copiar {
+        margin-left: 2rem;
+    }
+}
+
+
